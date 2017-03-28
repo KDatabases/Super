@@ -43,11 +43,15 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <versionGson>LATEST</versionGson>
         <versionDokka>0.9.13</versionDokka>
         <versionKotlin>1.1.1</versionKotlin>
+
         <versionMavenGPG>1.6</versionMavenGPG>
         <versionMavenShade>2.4.3</versionMavenShade>
         <versionMavenSources>3.0.1</versionMavenSources>
+
+        <versionSonatypeStage>1.6.8</versionSonatypeStage>
     </properties>
 
     <dependencies>
@@ -68,7 +72,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>LATEST</version>
+            <version>${versionGson}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -98,7 +102,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
+                <version>${versionSonatypeStage}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
