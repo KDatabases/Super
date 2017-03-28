@@ -11,16 +11,16 @@
 
     <name>${project.artifactId}</name>
     <description>Parent artifact for my Database wrappers</description>
-    <url>https://gitlab.com/SXT-Databases/Super</url>
+    <url>https://github.com/KDatabases/Super</url>
 
     <organization>
-        <name>Sxtanna Github</name>
-        <url>https://github.com/Sxtanna</url>
+        <name>KDatabases</name>
+        <url>https://github.com/KDatabases</url>
     </organization>
 
     <developers>
         <developer>
-            <name>Ranald Taylor</name>
+            <name>Sxtanna</name>
             <email>ranald.taylor@gmail.com</email>
         </developer>
     </developers>
@@ -34,8 +34,8 @@
     </licenses>
 
     <scm>
-        <url>git://Sxtanna@gitlab.com:SXT-Databases/Super.git</url>
-        <connection>scm:git:git://Sxtanna@gitlab.com:SXT-Databases/Super.git</connection>
+        <url>git://github.com:KDatabases/Super.git</url>
+        <connection>scm:git:git://github.com:KDatabases/Super.git</connection>
     </scm>
 
     <properties>
@@ -43,15 +43,11 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <versionDokka>0.9.13</versionDokka>
         <versionKotlin>1.1.1</versionKotlin>
         <versionMavenGPG>1.6</versionMavenGPG>
-        <versionMavenJar>2.6</versionMavenJar>
-        <versionMavenClean>3.0.0</versionMavenClean>
         <versionMavenShade>2.4.3</versionMavenShade>
-        <versionMavenCompile>3.5.1</versionMavenCompile>
         <versionMavenSources>3.0.1</versionMavenSources>
-        <versionMavenJavaDoc>2.10.4</versionMavenJavaDoc>
-        <kotlin.version>1.1.1</kotlin.version>
     </properties>
 
     <dependencies>
@@ -78,8 +74,8 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
 
         <plugins>
             <!--GPG Sign-->
@@ -134,7 +130,7 @@
                 </executions>
             </plugin>
 
-            <!--Attach Sources and JavaDocs-->
+            <!--Attach Sources and Dokka JavaDocs-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -149,22 +145,21 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${versionMavenJavaDoc}</version>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${versionDokka}</version>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>dokka</goal>
+                            <goal>javadocJar</goal>
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
-                </configuration>
             </plugin>
 
+            <!--Shade Dependencies-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -178,7 +173,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
