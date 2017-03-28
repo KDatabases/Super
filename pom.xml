@@ -11,6 +11,7 @@
 
     <name>${project.artifactId}</name>
     <description>Parent artifact for my Database wrappers</description>
+    <url>https://gitlab.com/SXT-Databases/Super</url>
 
     <organization>
         <name>Sxtanna Github</name>
