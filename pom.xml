@@ -6,7 +6,7 @@
 
     <groupId>com.sxtanna.database</groupId>
     <artifactId>Super</artifactId>
-    <version>pre-0.1</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -47,6 +47,9 @@
         <versionDokka>0.9.13</versionDokka>
         <versionKotlin>1.1.1</versionKotlin>
 
+        <versionJedis>2.9.0</versionJedis>
+        <versionHikari>2.6.1</versionHikari>
+
         <versionMavenGPG>1.6</versionMavenGPG>
         <versionMavenShade>2.4.3</versionMavenShade>
         <versionMavenSources>3.0.1</versionMavenSources>
@@ -78,7 +81,7 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <sourceDirectory>src/com.sxtanna.tests.main/kotlin</sourceDirectory>
         <testSourceDirectory>src/test/kotlin</testSourceDirectory>
 
         <plugins>
