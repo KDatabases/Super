@@ -43,22 +43,22 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <versionGson>2.8.1</versionGson>
-        <versionDokka>0.9.15</versionDokka>
-        <versionKotlin>1.1.4-3</versionKotlin>
+        <versionGson>2.8.5</versionGson>
+        <versionDokka>0.9.14</versionDokka>
+        <versionKotlin>1.2.71</versionKotlin>
 
-        <versionJUnitJupiter>5.0.0-M4</versionJUnitJupiter>
+        <versionJUnitJupiter>5.0.1</versionJUnitJupiter>
+        <versionJUnitPlatform>1.0.1</versionJUnitPlatform>
 
         <versionJedis>2.9.0</versionJedis>
-        <versionHikari>2.7.1</versionHikari>
+        <versionHikari>3.1.0</versionHikari>
 
         <versionSlf4jSimple>1.7.25</versionSlf4jSimple>
-        <versionMySQLConnector>6.0.6</versionMySQLConnector>
+        <versionMySQLConnector>8.0.12</versionMySQLConnector>
 
         <versionMavenGPG>1.6</versionMavenGPG>
-        <versionMavenShade>3.0.0</versionMavenShade>
+        <versionMavenShade>3.2.0</versionMavenShade>
         <versionMavenSources>3.0.1</versionMavenSources>
 
         <versionSonatypeStage>1.6.8</versionSonatypeStage>
